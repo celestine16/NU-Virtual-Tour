@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Fix Kuula to take full screen */
+#kuula-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Landing Screen */
+#landing-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+#landing-screen p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Move Menu Button to avoid overlapping */
+#menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    background: #004085;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Navigation Panel */
+#nav-menu {
+    position: fixed;
+    left: -270px; /* Completely hidden */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #fdb813;
+    padding: 5px;
+    transition: left 0.3s ease-in-out;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Show navigation when active */
+#nav-menu.active {
+    left: 0;
+}
+
+/* Adjust header to prevent overlapping */
+.nav-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.nav-logo {
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.nav-header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Facilities Section */
+.facilities {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+/* Buildings Toggle */
+.building h2 {
+    font-size: 16px;
+    margin: 5px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Rotating the arrow when expanded */
+.building.active .toggle-btn {
+    transform: rotate(180deg);
+}
+
+/* Floor List - Hidden by Default */
+.floor-list {
+    display: none;
+    padding-left: 15px;
+}
+
+/* Show floors when active */
+.building.active .floor-list {
+    display: block;
+}
+
+/* Floors should NOT be bold */
+.floor-list p {
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+/* Contact & Apply Now - Fix alignment */
+.nav-footer {
+    text-align: center;
+    padding: 350px 0;
+    margin-top: auto;
+}
+
+.apply-btn {
+    display: block;
+    background: #004085;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Prevent content from going outside the panel */
+.nav-footer p {
+    font-size: 12px;
+    margin: 5px 0;
+}
